@@ -15,7 +15,7 @@ class Question {
     new Question("Un de vos collègues vole votre travail et se l’approprie que faites vous ?", ["Réponse 1", "Réponse 2", "Réponse 3"], "Réponse 4")
   ];
 
-  class Explication {
+  /*class Explication {
       constructor(explication){
           this.explication = explication;
       }
@@ -28,17 +28,17 @@ class Question {
     new Explication("Explication Question 0"),
     new Explication("Explication Question 0"),
     new Explication("Explication Question 0")
-];
+];*/
 
 
   
   class Quiz {
-    constructor(questions, explications) {
+    constructor(questions, /*explications*/) {
       this.score = 0;
       this.questions = questions;
       this.currentQuestionIndex = 0;
-      this.explications = explications;
-      this.currentExplicationIndex = 0;
+      /*this.explications = explications;
+      this.currentExplicationIndex = 0;*/
 
     }
   
@@ -46,16 +46,16 @@ class Question {
         return this.questions[this.currentQuestionIndex];
       
     }
-    getCurrentExplication(){
+    /*getCurrentExplication(){
         return this.explications[this.currentExplicationIndex];
-    }
+    }*/
     guess(answer) {
         if (this.getCurrentQuestion().isCorrectAnswer(answer)) {
             
             this.score++;
             
         }
-        this.currentExplicationIndex++;
+        /*this.currentExplicationIndex++;*/
         this.currentQuestionIndex++;
 
 
@@ -67,10 +67,10 @@ class Question {
 
   
   const display = {
-    elementShown: function(id, text, explication) {
+    elementShown: function(id, text, /*explication*/) {
       let element = document.getElementById(id);
       element.innerHTML = text;
-      element.innerHTML = explication;
+      /*element.innerHTML = explication;*/
     },
     endQuiz: function() {
       endQuizHTML = `
@@ -82,9 +82,9 @@ class Question {
       this.elementShown("question", quiz.getCurrentQuestion().text);
       
     },
-    explication: function() {
+    /*explication: function() {
         this.elementShown("explication", explication.getCurrentExplication().explications);
-      },
+      },*/
     choices: function() {
       let choices = quiz.getCurrentQuestion().choices;
   
@@ -118,5 +118,5 @@ class Question {
   }
   // Create Quiz
   let quiz = new Quiz(questions);
-  let explication = new Explication(explications)
+  /*let explication = new Explication(explications);*/
   quizApp();
