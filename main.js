@@ -11,8 +11,8 @@ class Question {
   }
   let questions = [
     new Question("Un de vos collègues vole votre travail et se l’approprie que faites vous ?", ["Au début c'était stressant et vous aviez du mal à vous adapter.", "Vous avez mis un peu de temps à vous adapter dû à la gestion de votre stress.", "Vous avez apprécié, cela vous a permis d'apprendre à gérer votre stress."], "Réponse 4"),
-    new Question("Un de vos collègues vole votre travail et se l’approprie que faites vous ?", ["Réponse 1", "Réponse 2", "Réponse 3"], "Réponse 4"),
-    new Question("Un de vos collègues vole votre travail et se l’approprie que faites vous ?", ["Réponse 1", "Réponse 2", "Réponse 3"], "Réponse 4")
+    new Question("Vous êtes dans la question 2 ?", ["Réponse 1", "Réponse 2", "Réponse 3"], "Réponse 4"),
+    new Question("Vous êtes dans la question 3 ?", ["Réponse 1", "Réponse 2", "Réponse 3"], "Réponse 4")
   ];
 
   /*class Explication {

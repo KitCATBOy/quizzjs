@@ -13,7 +13,7 @@ body {
   align-items: center;
   justify-items: center;
   min-height: 100vh;
-  background: #161718;
+  background: #1c1c1d;
   color: #dfe4ea;
 }
 body h1 {
@@ -46,17 +46,22 @@ body .container .choices button {
   background: #dfe4ea;
   user-select: none;
   font-weight: 600;
+  transition: 0.5s;
+  opacity: 80%;
+  
 }
 body .container .choices button:hover {
   background: #6352b1;
   transition: 0.5s;
+  transform: scale(1.03);
+  
 }
 body .container .choices button:active {
   transform: scale(0.9);
   transition: transform 0.1s;
 }
 body .container .choices button p {
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 body #progress {
   font-size: 1.3rem;
